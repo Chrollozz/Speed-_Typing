@@ -21,8 +21,8 @@ body {
     border-radius: 4px; /* มุมโค้งของปุ่ม */
     padding: 5px 15px; /* ระยะห่างภายในปุ่ม */
     position: absolute; /* วางตำแหน่งแบบ absolute */
-    bottom: 30px; /* ห่างจากด้านล่าง 30px */
-    left: 30px; /* ห่างจากด้านซ้าย 30px */
+    bottom: 30px; /* ห่างจากด้านล่าง  */
+    left: 30px; /* ห่างจากด้านซ้าย */
 }
 
 .settings {
@@ -87,15 +87,15 @@ input {
 
 .time-container {
     position: absolute; /* วางตำแหน่งแบบ absolute */
-    top: 60px; /* ห่างจากด้านบน 60px */
-    left: 25px; /* ห่างจากด้านซ้าย 25px */
+    top: 60px; /* ห่างจากด้านบน */
+    left: 25px; /* ห่างจากด้านซ้าย  */
     color: greenyellow; /* สีข้อความ */
 }
 
 .score-container {
     position: absolute; /* วางตำแหน่งแบบ absolute */
-    top: 60px; /* ห่างจากด้านบน 60px */
-    right: 25px; /* ห่างจากด้านขวา 25px */
+    top: 60px; /* ห่างจากด้านบน */
+    right: 25px; /* ห่างจากด้านขวา  */
 }
 
 .gameover-container {
