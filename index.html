@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ข้อมูลเมตาและการเชื่อมต่อทรัพยากรภายนอก -->
+    <meta charset="UTF-8"> <!-- กำหนดการเข้ารหัสตัวอักษรเป็น UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ทำให้หน้าเว็บแสดงผลได้เหมาะสมบนอุปกรณ์มือถือ -->
+    <title>Speed Typing</title> <!-- ชื่อของหน้าเว็บที่จะแสดงในแท็บของเบราว์เซอร์ -->
+
+    <!-- เชื่อมต่อไฟล์ Font Awesome สำหรับใช้งานไอคอน -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!-- เชื่อมต่อไฟล์ CSS สำหรับกำหนดรูปแบบการแสดงผล -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ปุ่มเปิดการตั้งค่า -->
+    <button id="level-btn" class="level-btn">
+        <!-- ไอคอนรูปเฟืองสำหรับปุ่มตั้งค่า -->
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- ส่วนการตั้งค่าระดับความยาก -->
+    <div class="settings" id="settings">
+        <form id="level-form">
+            <label for="">ระดับความยาก :</label> <!-- ป้ายข้อความสำหรับระดับความยาก -->
+            <select id="level"> <!-- เมนูแบบเลื่อนลงเพื่อเลือกระดับความยาก -->
+                <option value="easy">ง่าย</option> <!-- ระดับง่าย -->
+                <option value="medium">ปานกลาง</option> <!-- ระดับปานกลาง -->
+                <option value="hard">ยาก</option> <!-- ระดับยาก -->
+            </select>
+        </form>
+    </div>
+
+    <!-- ส่วนหลักของเกม -->
+    <div class="container">
+        <h2>เกมพิมพ์เร็ว | Speed Typing</h2> <!-- ชื่อเกม -->
+        <h1 id="word" class="word"></h1> <!-- คำที่ผู้เล่นต้องพิมพ์ -->
+        <input type="text" name="" id="text" autocomplete="off" placeholder="ป้อนคำคุณเห็น"> <!-- ช่องใส่ข้อความสำหรับผู้เล่น -->
+        <p class="time-container">เวลา <span id="time"></span> วินาที</p> <!-- แสดงเวลา -->
+        <p class="score-container"><span id="score">0</span> คะแนน</p> <!-- แสดงคะแนน -->
+        <div id="gameover-container" class="gameover-container"></div> <!-- พื้นที่สำหรับแสดงข้อความเมื่อเกมจบ -->
+    </div>
+
+    <!-- เชื่อมต่อไฟล์ JavaScript ภายนอกเพื่อทำงานฟังก์ชันของเกม -->
+    <script src="script.js"></script>
+</body>
+</html>

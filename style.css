@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Pridi&display=swap');
+/* นำเข้าแบบอักษร Kanit และ Pridi จาก Google Fonts */
+
+* {
+    box-sizing: border-box; /* รวม padding และ border เข้าไปในขนาดของ element */
+    font-family: 'Kanit', sans-serif; /* กำหนดแบบอักษรเริ่มต้นเป็น Kanit */
+}
+
+body {
+    background-color: #2c3e50; /* กำหนดสีพื้นหลัง */
+    display: flex; /* ใช้ Flexbox เพื่อจัด layout */
+    align-items: center; /* จัดให้อยู่ตรงกลางในแนวแกนตั้ง */
+    justify-content: center; /* จัดให้อยู่ตรงกลางในแนวแกนนอน */
+    min-height: 100vh; /* กำหนดความสูงขั้นต่ำให้เต็มหน้าจอ */
+    margin: 0; /* ลบ margin เริ่มต้นของ body */
+}
+
+.level-btn {
+    cursor: pointer; /* เปลี่ยน cursor เป็นแบบ pointer เมื่อ hover */
+    font-size: 14px; /* ขนาดตัวอักษร */
+    border-radius: 4px; /* มุมโค้งของปุ่ม */
+    padding: 5px 15px; /* ระยะห่างภายในปุ่ม */
+    position: absolute; /* วางตำแหน่งแบบ absolute */
+    bottom: 30px; /* ห่างจากด้านล่าง 30px */
+    left: 30px; /* ห่างจากด้านซ้าย 30px */
+}
+
+.settings {
+    position: absolute; /* วางตำแหน่งแบบ absolute */
+    top: 0; /* วางชิดด้านบน */
+    left: 0; /* วางชิดด้านซ้าย */
+    width: 100%; /* กว้างเต็มหน้าจอ */
+    background-color: rgba(0, 0, 0, 0.3); /* สีพื้นหลังแบบโปร่งแสง */
+    height: 70px; /* ความสูงของส่วนการตั้งค่า */
+    display: flex; /* ใช้ Flexbox เพื่อจัด layout */
+    align-items: center; /* จัดให้อยู่ตรงกลางในแนวแกนตั้ง */
+    justify-content: center; /* จัดให้อยู่ตรงกลางในแนวแกนนอน */
+    transform: translateY(0); /* เริ่มต้นตำแหน่งที่แกน Y = 0 */
+    transition: transform 0.3s ease-in-out; /* เพิ่มเอฟเฟกต์เปลี่ยนตำแหน่ง */
+}
+
+.settings.hide {
+    transform: translateY(-100%); /* ซ่อนส่วนการตั้งค่าโดยเลื่อนขึ้นไป */
+}
+
+select {
+    width: 200px; /* ความกว้างของ dropdown */
+    padding: 5px; /* ระยะห่างภายใน */
+    appearance: none; /* ลบสไตล์เริ่มต้นของ select */
+    border-radius: 5px; /* มุมโค้ง */
+}
+
+label {
+    color: white; /* กำหนดสีตัวอักษร */
+}
+
+.container {
+    background-color: #34495e; /* สีพื้นหลังของกล่องหลัก */
+    padding: 20px; /* ระยะห่างภายใน */
+    border-radius: 4px; /* มุมโค้ง */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); /* เงาของกล่อง */
+    color: #fff; /* สีตัวอักษร */
+    position: relative; /* กำหนดตำแหน่งแบบ relative */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    width: 500px; /* ความกว้างของกล่อง */
+}
+
+h2 {
+    background-color: rgba(0, 0, 0, 0.3); /* สีพื้นหลังแบบโปร่งแสง */
+    padding: 8px; /* ระยะห่างภายใน */
+    margin: 0 0 40px; /* ระยะห่างจากด้านล่าง */
+}
+
+.word {
+    margin: 0; /* ลบระยะห่างรอบตัว */
+    color: yellow; /* สีข้อความ */
+}
+
+input {
+    border: 0; /* ไม่มีเส้นขอบ */
+    border-radius: 2px; /* มุมโค้ง */
+    font-size: 18px; /* ขนาดตัวอักษร */
+    width: 300px; /* ความกว้างของช่อง input */
+    padding: 12px 20px; /* ระยะห่างภายใน */
+    margin-top: 10px; /* ระยะห่างด้านบน */
+}
+
+.time-container {
+    position: absolute; /* วางตำแหน่งแบบ absolute */
+    top: 60px; /* ห่างจากด้านบน 60px */
+    left: 25px; /* ห่างจากด้านซ้าย 25px */
+    color: greenyellow; /* สีข้อความ */
+}
+
+.score-container {
+    position: absolute; /* วางตำแหน่งแบบ absolute */
+    top: 60px; /* ห่างจากด้านบน 60px */
+    right: 25px; /* ห่างจากด้านขวา 25px */
+}
+
+.gameover-container {
+    background: inherit; /* ใช้สีพื้นหลังเดียวกับ container */
+    position: absolute; /* วางตำแหน่งแบบ absolute */
+    top: 0; /* ชิดด้านบน */
+    left: 0; /* ชิดด้านซ้าย */
+    width: 100%; /* กว้างเต็มพื้นที่ */
+    height: 100%; /* สูงเต็มพื้นที่ */
+    z-index: 1; /* ให้อยู่ด้านบนของ element อื่น */
+    align-items: center; /* จัดให้อยู่ตรงกลางในแนวแกนตั้ง */
+    justify-content: center; /* จัดให้อยู่ตรงกลางในแนวแกนนอน */
+    flex-direction: column; /* จัด layout แบบคอลัมน์ */
+    display: none; /* ซ่อนกล่องนี้ไว้ก่อน */
+}
